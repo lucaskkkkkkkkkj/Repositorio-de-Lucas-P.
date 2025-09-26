@@ -1,0 +1,114 @@
+6. #include <stdio.h>
+
+int main(){
+    int glicose;
+    printf("Digite o valor da glicose: ");
+    scanf("%d", &glicose);
+    if(glicose < 100){
+        printf("Normal\n");
+    } else if(glicose >= 100 && glicose <= 140){
+        printf("Elevado\n");
+    } else {
+        printf("Diabetes\n");
+    }
+}
+
+7.
+#include <stdio.h>
+
+int main() {
+    int tentativa1, tentativa2, tentativa3;
+    printf("Primeira distancia do dardo: ");
+    scanf("%d", &tentativa1);
+    printf("Segunda distancia do dardo: ");
+    scanf("%d", &tentativa2);
+    printf("Terceira distancia do dardo: ");
+    scanf("%d", &tentativa3);
+    if (tentativa1 > tentativa2 && tentativa1 > tentativa3) {
+        printf("Primeira tentativa foi a maior com %d metros\n", tentativa1);
+    } else if (tentativa2 > tentativa1 && tentativa2 > tentativa3) {
+        printf("Segunda tentativa foi a maior com %d metros\n", tentativa2);
+    } else if (tentativa3 > tentativa1 && tentativa3 > tentativa2) {
+        printf("Terceira tentativa foi a maior com %d metros\n", tentativa3);
+    } else {
+        printf("Houve empate entre as tentativas\n");
+    }
+    return 0;
+}
+
+8. #include <stdio.h>
+
+int main() { 
+    float celcius, fahrenheit;
+    printf("Deseja converter de Celsius para Fahrenheit ou de Fahrenheit para Celsius? (C/F): ");
+    char choice;
+    scanf(" %c", &choice);
+    if (choice == 'C' || choice == 'c') {
+        printf("Digite a temperatura em Celsius: ");
+        scanf("%f", &celcius);
+        fahrenheit = (celcius * 9/5) + 32;
+        printf("%.2f Celsius é igual a %.2f Fahrenheit\n", celcius, fahrenheit);
+    } else if (choice == 'F' || choice == 'f') {
+        printf("Digite a temperatura em Fahrenheit: ");
+        scanf("%f", &fahrenheit);
+        celcius = (fahrenheit - 32) * 5/9;
+        printf("%.2f Fahrenheit é igual a %.2f Celsius\n", fahrenheit, celcius);
+    } else {
+        printf("Opção inválida. Por favor, escolha 'C' ou 'F'.\n");
+    }
+    return 0;
+}
+
+9. 
+#include <stdio.h>
+
+int main() {
+    int codigo, quantidade;
+    float total;
+
+    printf("Digite o codigo do produto: ");
+    scanf("%d", &codigo);
+    printf("Digite a quantidade: ");
+    scanf("%d", &quantidade);
+
+    if (codigo == 1) {
+        total = 5.00 * quantidade;
+        printf("Total a pagar: R$ %.2f\n", total);
+    } else if (codigo == 2) {
+        total = 3.50 * quantidade;
+        printf("Total a pagar: R$ %.2f\n", total);
+    } else if (codigo == 3) {
+        total = 4.80 * quantidade;
+        printf("Total a pagar: R$ %.2f\n", total);
+    } else if (codigo == 4) {
+        total = 8.90 * quantidade;
+        printf("Total a pagar: R$ %.2f\n", total);
+    } else if (codigo == 5) {
+        total = 7.32 * quantidade;
+        printf("Total a pagar: R$ %.2f\n", total);
+    } else {
+        printf("Codigo invalido.\n");
+    }
+
+    return 0;
+}
+
+10.
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%d", &a);
+    printf("Digite o segundo numero: ");
+    scanf("%d", &b);
+
+    if (a % b == 0 || b % a == 0) {
+        printf("Sao multiplos\n");
+    } else {
+        printf("Nao sao multiplos\n");
+    }
+
+    return 0;
+}
